@@ -1,8 +1,8 @@
 language: node_js
 node_js: stable
-cache:
-directories:
-- node_modules
+#cache:
+#directories:
+#- node_modules
 before_install:
 - npm install -g hexo
 #- npm install -g hexo-cli
