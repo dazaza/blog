@@ -10,9 +10,9 @@ install:
 - npm install
 - npm install -S hexo-generator-json-content
 
-before_script:
-- npm install -g mocha
-- git clone --branch master https://github.com/dazaza/dazaza.github.io
+# before_script:
+# - npm install -g mocha
+# - git clone --branch master https://github.com/dazaza/dazaza.github.io
 
 script:
 - hexo cl
@@ -33,4 +33,4 @@ only:
 
 env:
   global:
-    - GH_REF: github.com/dazaza/dazaza.github.io
+    - GH_REF: github.com/dazaza/test
