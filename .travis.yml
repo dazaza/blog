@@ -5,7 +5,7 @@ directories:
 - node_modules
 before_install:
 - npm install -g hexo
-- npm install -g hexo-cli
+#- npm install -g hexo-cli
 install:
 - npm install
 - npm install -S hexo-generator-json-content
