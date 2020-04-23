@@ -20,16 +20,14 @@ script:
 - hexo g
 
 after_script:
-- git clone ${GH_REF2} public-back
-- cp -rf public/* public-back/
-- cd public-back
-#- git init
+- cd ./public
+- ls -l
+- git init
 - git config user.name "dazaza"
 - git config user.email "diglog@126.com"
 - git add .
 - git commit -m "update from travis-ci"
-#- git push --force "https://${GH_TOKEN}@${GH_REF}" origin master
-- git push origin master
+- git push --force "https://${GH_TOKEN}@${GH_REF}" origin master
 
 branches:
 only:
@@ -38,4 +36,3 @@ only:
 env:
   global:
     - GH_REF: github.com/dazaza/dazaza.github.io
-    - GH_REF2: https://dazaza:${GH_TOKEN}@github.com/dazaza/dazaza.github.io
