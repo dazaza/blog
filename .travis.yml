@@ -9,29 +9,27 @@ before_install:
 install:
 - npm install
 - npm install -S hexo-generator-json-content
-- npm install hexo-deployer-git --save
 
-# before_script:
-# - npm install -g mocha
-# - git clone --branch master https://github.com/dazaza/dazaza.github.io
+before_script:
+- npm install -g mocha
+- git clone --branch master https://github.com/dazaza/dazaza.github.io
 
 script:
-- hexo clean
-- hexo g
+- hexo cl
+- hexo g -d
 
 after_script:
 - cd ./public
-- ls -l
 - git init
 - git config user.name "dazaza"
 - git config user.email "diglog@126.com"
 - git add .
-- git commit -m "update from travis-ci"
-- git push --force "https://${GH_TOKEN}@${GH_REF}" origin master
+- git commit -m "update blog"
+- git push --force "https://${GH_TOKEN}@${GH_REF}" master:master
 
 branches:
 only:
-- master #watch this branch
+- blog #watch this branch
 
 env:
   global:
