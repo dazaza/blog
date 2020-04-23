@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 'diglog'
-subtitle: '奇客发现'
+title: diglog
+subtitle: ''
 description: ''
 keywords:
 author: diglog
-language: zh-Hans
+language: en
 timezone: ''
 
 # URL
