@@ -21,8 +21,8 @@ script:
 after_script:
 - cd ./public
 - git init
-- git config user.name "${USER_NAME}"
-- git config user.email "${EMAIL}"
+- git config user.name "dazaza"
+- git config user.email "diglog@126.com"
 - git add .
 - git commit -m "update blog"
 - git push --force --quite "https://${GH_TOKEN}@{GH_REF}" master:master
